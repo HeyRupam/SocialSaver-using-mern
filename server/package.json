@@ -1,9 +1,11 @@
 {
-  "name": "server",
+
+  "name": "socialsaver-using-mern",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
@@ -15,4 +17,5 @@
     "nodemon": "^3.0.1",
     "ytdl-core": "^4.11.5"
   }
+
 }
