@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
 
 
-function App() {
+function Youtube() {
   const [yturl, setYturl] = useState()
   const [ytformats, setYtformats] = useState()
   const [ytdetails, setYtdetails] = useState()
@@ -54,7 +53,7 @@ function App() {
           ytformats.map((format, index) => (
             <div key={format.itag}>
               <p>{format.qualityLabel}</p>
-              <button onClick={(e) => handleDownload(e, index)}>Download Video</button>
+              <button className='white rounded-0' onClick={(e) => handleDownload(e, index)}>Download Video</button>
             </div>
           ))
         ) : (
@@ -65,4 +64,4 @@ function App() {
   )
 }
 
-export default App
+export default Youtube
