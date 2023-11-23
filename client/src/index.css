@@ -1,4 +1,3 @@
-
 body {
   background-image: linear-gradient(to right, #007BFF, red);
   background-repeat: no-repeat;
@@ -10,13 +9,19 @@ a {
   text-decoration: inherit;
 }
 
-p{
+p {
   color: white;
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h5 {
+  color: white !important;
 }
 
 button {
@@ -30,57 +35,87 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.youtube_color{
+.youtube_color {
   color: gold;
-  text-decoration: underline;
+  border: 2px solid gold !important;
 }
-.instagram_color{
+
+.instagram_color {
   color: gold;
-  text-decoration: underline;
+  border: 2px solid gold !important;
 }
-.facebook_color{
+
+.facebook_color {
   color: gold;
-  text-decoration: underline;
+  border: 2px solid gold !important;
 }
-.white{
+
+.white {
   color: white;
 }
-.brand_logo{
+
+.brand_logo {
   height: auto;
   width: 170px;
 }
-.nav_btn .yt:hover{
+
+.nav_btn .yt:hover {
   color: gold !important;
+  border: 2px solid gold;
 }
-.nav_btn .insta:hover{
+
+.nav_btn .insta:hover {
   color: gold !important;
+  border: 2px solid gold;
 }
-.nav_btn .fb:hover{
+
+.nav_btn .fb:hover {
   color: gold !important;
+  border: 2px solid gold;
+  ;
 }
-.main_content{
+
+.main_content {
   min-height: 100vh;
   height: auto;
 }
+
 .white-line {
   border: 1px solid white;
   margin: 10px 0;
   height: 1px;
   box-shadow: 0 2px 5px rgb(255, 255, 255);
 }
-label{
+
+label {
   color: white;
 }
-button{
+
+button {
   background-color: mediumvioletred !important;
+}
+
+.options {
+  border: 1px solid white;
+}
+
+.round-link {
+  background: transparent;
+  border: 2px solid white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-left: 8px;
 }
 
 /* .nav_bg{
@@ -94,9 +129,11 @@ button{
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

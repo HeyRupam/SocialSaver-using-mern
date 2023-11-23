@@ -17,13 +17,13 @@ function Herader() {
           />
         </Link>
         <Nav className="nav_btn ml-lg-auto">
-            <NavLink to="/" className={({ isActive }) => `yt px-3 ${isActive ? "youtube_color" : "white"}`}>Youtube</NavLink>
-          <NavLink to="/instagram" className={({ isActive }) => `insta px-3 ${isActive ? "instagram_color" : "white"}`}>Instagram</NavLink>
-          <NavLink to="/facebook" className={({ isActive }) => `fb px-3 ${isActive ? "facebook_color" : "white"}`}>Facebook</NavLink>
+            <NavLink to="/" className={({ isActive }) => `yt round-link px-3 ${isActive ? "youtube_color" : "white"}`}>Youtube</NavLink>
+          <NavLink to="/instagram" className={({ isActive }) => `insta round-link px-3 ${isActive ? "instagram_color" : "white"}`}>Instagram</NavLink>
+          <NavLink to="/facebook" className={({ isActive }) => `fb round-link px-3 ${isActive ? "facebook_color" : "white"}`}>Facebook</NavLink>
         </Nav>
       </Container>
     </Navbar>
-    <hr class="white-line"/>
+    <hr className="white-line"/>
     </>
   )
 }
