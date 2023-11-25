@@ -8,9 +8,11 @@ function Youtube() {
   const [ytformats, setYtformats] = useState()
   const [ytdetails, setYtdetails] = useState()
   const [ytitag, setYtitag] = useState()
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true)
     axios.post('http://localhost:3001/yt', { yturl })
       .then(res => {
         if (res.data == 'fail') {
@@ -19,6 +21,7 @@ function Youtube() {
         else {
           console.log('data recived');
           console.log(res.data);
+          setLoading(false)
           setYtformats(res.data.formats)
           setYtdetails(res.data.videoDetails)
         }
@@ -49,7 +52,7 @@ function Youtube() {
     const remainingSeconds = timeInSeconds % 60;
     return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
   };
-  
+
   return (
     <div className='container main_content'>
       <div className=' row justify-content-center'>
@@ -61,7 +64,10 @@ function Youtube() {
             </div>
             <button type='submit' className='btn text-white w-100 rounded-4'>Submit</button>
           </form>
-
+          {loading &&
+            <div className='text-center'>
+              <img className='loader' src='/src/assets/loader.gif' alt='Loading' />
+            </div>}
         </div>
 
         <div className='col-lg-12 my-5'>
@@ -71,7 +77,7 @@ function Youtube() {
                 <div>
                   <div className='thumb' style={handleThumb(ytdetails.thumbnails[4].url)}>
                   </div>
-                  <p>{ytdetails.title} {console.log(ytdetails.thumbnails[4].url)}</p>
+                  <p>{ytdetails.title}</p>
                   <p>Duration: {formatTime(ytdetails.lengthSeconds)}</p>
                 </div>
               ) : ''}
