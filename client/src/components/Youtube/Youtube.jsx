@@ -111,7 +111,8 @@ function Youtube() {
                       <h5>{format.qualityLabel}</h5>
                     </div>
                     <div className='col-lg-4 options text-center'>
-                      <button className='white rounded-4' onClick={(e) => handleDownload(e, format)}>Download</button>
+                      <a href={format.url}>Download Now</a>
+                      {/* <button className='white rounded-4' onClick={(e) => handleDownload(e, format)}>Download</button> */}
                     </div>
                   </div>
                 ))}
