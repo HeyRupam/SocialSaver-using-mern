@@ -32,17 +32,18 @@ app.post('/yt', async (req, res) => {
 });
 
 app.post('/download', async (req, res) => {
-  const { ytitag } =  req.body;
-
+  const { videoInfo } =  req.body;
+  // console.log(videoInfo);
   try {
     if (videoInfo) {
       // Use the videoInfo variable here
-      console.log('Video Info:', videoInfo.formats[ytitag].url);
+      console.log('Video Info:', videoInfo);
+      res.json({message: "Target video received"})
     } else {
-      console.log('No video info available');
+      res.status(404).json({message: "Target video not found"})
     }
   } catch (e) {
-    console.log(e);
+    res.status(500).json({message: "Internal server error"})
   }
 });
 

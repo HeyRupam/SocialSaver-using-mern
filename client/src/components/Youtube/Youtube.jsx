@@ -26,11 +26,11 @@ function Youtube() {
       .catch(err => console.log(err))
   }
 
-  const handleDownload = (e, index) => {
+  const handleDownload = (e, videoInfo) => {
     e.preventDefault()
-    setYtitag(index)
-    console.log(ytitag);
-    axios.post('http://localhost:3001/download', { ytitag })
+    // setYtitag(index)
+    // console.log(ytitag);
+    axios.post('http://localhost:3001/download', { videoInfo })
       .then(res => console.log(res))
       .catch(err => console.log(err))
   }
@@ -111,7 +111,7 @@ function Youtube() {
                       <h5>{format.qualityLabel}</h5>
                     </div>
                     <div className='col-lg-4 options text-center'>
-                      <button className='white rounded-4' onClick={(e) => handleDownload(e, index)}>Download</button>
+                      <button className='white rounded-4' onClick={(e) => handleDownload(e, format)}>Download</button>
                     </div>
                   </div>
                 ))}
